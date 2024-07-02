@@ -1,34 +1,38 @@
+html{
+    --color1: #C4DFDF ;
+    --color2: #D2E9E9 ;
+    --color3: #E3F4F4 ;
+    --color4: #F8F6F4 ;
+    --color5: #000000 ;
+}
 header,
 footer {
-    background-color: #C4DFDF;
+    background-color: var(--color1);
 }
 
 #link li:hover,
 .card:hover {
-    background-color: #D2E9E9;
+    background-color: var(--color2);
 }
 
+#uplight:hover,
+#light:hover,
 #link li,
 .card,
 #about,
 .album,
 #updark:hover,
 #dark:hover {
-    background-color: #E3F4F4;
+    background-color: var(--color3);
 }
 
 body {
-    background-color: #F8F6F4;
+    background-color: var(--color4);
 }
 
 body,
 a {
-    color: black;
-}
-
-#uplight:hover,
-#light:hover {
-    background-color: #3e4136;
+    color: var(--color5);
 }
 
 * {
@@ -139,7 +143,7 @@ iframe {
     height: 100%;
 }
 
-#link{
+#link {
     margin: 5px auto;
 }
 
