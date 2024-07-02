@@ -2,30 +2,35 @@ $(document).ready(function () {
     $("#dark").click(function () {
         $("#dark,#updark").fadeOut(200);
         $("#light,#uplight").fadeIn(200);
-        $("header,footer").css("background-color", "#2f3229");
-        $("#link li,.card,#about,.album").css("background-color", "#3e4136");
-        $("body").css("background-color", "#4d4739");
-        $("body,a").css("color", "#dfdfdf");
+        $("html").css({
+            "--color1":"#2f3229",
+            "--color2":"#575c4a",
+            "--color3":"#3e4136",
+            "--color4":"#4d4739",
+            "--color5":"#dfdfdf"
+        })
         $("#link li,.card").mouseenter(function () {
-            $(this).css("background-color", "#575c4a");
+            $(this).css("background-color", "var(--color2)");
         });
         $("#link li,.card").mouseleave(function () {
-            $(this).css("background-color", "#3e4136");
+            $(this).css("background-color", "var(--color3)");
         });
     });
     $("#light").click(function () {
         $("#light,#uplight").fadeOut(200);
         $("#dark,#updark").fadeIn(200);
-        $("header,footer").css("background-color", "#C4DFDF");
-        $("#link li:hover,.card:hover").css("background-color", "#D2E9E9");
-        $("#link li,.card,#about,.album").css("background-color", "#E3F4F4");
-        $("body").css("background-color", "#F8F6F4");
-        $("body,a").css("color", "black");
+        $("html").css({
+            "--color1":"#C4DFDF",
+            "--color2":"#D2E9E9",
+            "--color3":"#E3F4F4",
+            "--color4":"#F8F6F4",
+            "--color5":"#000000"
+        })
         $("#link li,.card").mouseenter(function () {
-            $(this).css("background-color", "#D2E9E9");
+            $(this).css("background-color", "var(--color2)");
         });
         $("#link li,.card").mouseleave(function () {
-            $(this).css("background-color", "#E3F4F4");
+            $(this).css("background-color", "var(--color3)");
         });
     });
     $("#card1").click(function () {
