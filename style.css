@@ -1,10 +1,11 @@
-html{
-    --color1: #C4DFDF ;
-    --color2: #D2E9E9 ;
-    --color3: #E3F4F4 ;
-    --color4: #F8F6F4 ;
-    --color5: #000000 ;
+html {
+    --color1: #C4DFDF;
+    --color2: #D2E9E9;
+    --color3: #E3F4F4;
+    --color4: #F8F6F4;
+    --color5: #000000;
 }
+
 header,
 footer {
     background-color: var(--color1);
@@ -47,13 +48,13 @@ a {
 
 header {
     text-align: center;
-    height: 6.5vh;
-    padding: 1vh;
+    height: fit-content;
+    padding: 10px;
 }
 
 .img,
 .headimg {
-    width: 4vh;
+    width: 35px;
     position: fixed;
     right: 10px;
     padding: 5px;
@@ -94,14 +95,14 @@ main h1 {
 #about,
 .album {
     padding: 2vmin 3vmin;
-    border-radius: 3vmin;
+    border-radius: 30px;
     margin: 2vmin 0vmin;
 }
 
 #AUR {
     width: 100%;
     max-width: 800px;
-    border-radius: 4vmin;
+    border-radius: 30px;
     padding: 1vmin;
 }
 
@@ -109,13 +110,13 @@ main h1 {
     height: 250px;
     padding: 20px;
     display: inline-block;
-    border-radius: 4vmin;
+    border-radius: 30px;
     margin: 2vmin 5px;
 }
 
 .card img {
     height: 80%;
-    border-radius: 3vmin;
+    border-radius: 20px;
 }
 
 .card h3 {
@@ -138,7 +139,7 @@ h2 {
 }
 
 iframe {
-    border-radius: 3vmin;
+    border-radius: 20px;
     width: 100%;
     height: 100%;
 }
@@ -151,7 +152,7 @@ iframe {
     display: inline-block;
     width: 80vmin;
     max-width: 260px;
-    border-radius: 6vmin;
+    border-radius: 30px;
     margin: 2vmin 5px;
 }
 
@@ -167,12 +168,56 @@ a {
 }
 
 footer {
+    position: relative;
+    height: 200px;
     text-align: center;
-    padding: 3vh;
-    padding-top: 10vh;
+}
+
+#footer p {
+    margin: 10px;
+}
+
+#footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
 }
 
 footer li {
     display: inline-block;
     margin: 3vh 2vw;
+}
+
+@media only screen and (max-width: 425px) {
+    .card {
+        height: 60vmin;
+        padding: 15px;
+    }
+
+    .card h3 {
+        padding-top: 14px;
+    }
+
+    audio {
+        width: 70vmin;
+    }
+
+    .card,
+    #about,
+    .album {
+        border-radius: 20px;
+    }
+
+    iframe,
+    .card img,
+    #AUR {
+        border-radius: 15px;
+    }
+
+}
+
+@media only screen and (max-width: 350px) {
+    .card h3 {
+        padding-top: 10px;
+    }
 }
