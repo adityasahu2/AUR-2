@@ -59,6 +59,7 @@ header {
     right: 10px;
     padding: 5px;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 .img {
@@ -120,6 +121,7 @@ main h1 {
     grid-template-rows: 180px 20px;
     padding: 20px;
     border-radius: 30px;
+    cursor: pointer;
 }
 
 .card img {
