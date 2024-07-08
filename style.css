@@ -106,23 +106,31 @@ main h1 {
     padding: 1vmin;
 }
 
+#cards {
+    margin: 10px 0px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px 40px;
+}
+
 .card {
-    height: 250px;
+    display: grid;
+    grid-template-rows: 175px 20px;
     padding: 20px;
-    display: inline-block;
     border-radius: 30px;
-    margin: 2vmin 5px;
 }
 
 .card img {
-    height: 80%;
+    width: 280px;
     border-radius: 20px;
 }
 
 .card h3 {
     font-size: 1.2em;
-    padding-top: 16px;
 }
+
 
 h2 {
     padding: 15px;
@@ -145,15 +153,17 @@ iframe {
 }
 
 #link {
-    margin: 5px auto;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 #link li {
-    display: inline-block;
-    width: 80vmin;
-    max-width: 260px;
+    list-style-type: none;
+    width: 260px;
     border-radius: 30px;
-    margin: 2vmin 5px;
 }
 
 #link a {
@@ -189,13 +199,17 @@ footer li {
 }
 
 @media only screen and (max-width: 425px) {
-    .card {
-        height: 60vmin;
-        padding: 15px;
+    .card img {
+        width: 290px;
     }
 
-    .card h3 {
-        padding-top: 14px;
+    .card {
+        padding: 15px;
+        grid-template-rows: 175px 15px;
+    }
+
+    #cards {
+        gap: 20px;
     }
 
     audio {
@@ -213,11 +227,14 @@ footer li {
     #AUR {
         border-radius: 15px;
     }
-
 }
 
 @media only screen and (max-width: 350px) {
-    .card h3 {
-        padding-top: 10px;
+    .card img {
+        width: 245px;
+    }
+
+    .card {
+        grid-template-rows: 147px 15px;
     }
 }
