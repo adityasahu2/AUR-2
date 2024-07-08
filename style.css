@@ -112,18 +112,18 @@ main h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px 40px;
+    gap: 20px 30px;
 }
 
 .card {
     display: grid;
-    grid-template-rows: 175px 20px;
+    grid-template-rows: 180px 20px;
     padding: 20px;
     border-radius: 30px;
 }
 
 .card img {
-    width: 280px;
+    width: 290px;
     border-radius: 20px;
 }
 
