@@ -19,11 +19,64 @@ html {
     box-sizing: border-box;
 }
 
-.color1{
+.color2 {
+    animation: slideInRight 1s ease-out;
+    animation-timeline: view(90vmin 0vmin);
+}
+
+.heading {
+    position: relative;
+    z-index: -1;
+    animation: fadeIn 1s ease-out;
+    animation-timeline: view(80vmin 0vmin);
+}
+
+.album {
+    animation: slideInBottom 1s ease-out;
+    animation-timeline: view(90vmin 0vmin);
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100vmax);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInBottom {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    10% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.color1 {
     background-color: var(--color1);
 }
 
-.color2:hover{
+.color2:hover {
     background-color: var(--color2);
 }
 
@@ -35,6 +88,7 @@ html {
 
 body {
     background-color: var(--color4);
+    overflow-x: hidden;
 }
 
 body,
@@ -43,7 +97,7 @@ a {
 }
 
 .color3hov:hover,
-.color2:hover{
+.color2:hover {
     box-shadow: 0px 3px 10px var(--color6);
     transform: scale(1.03);
 }
@@ -53,7 +107,7 @@ a {
 .color3,
 .color3hov,
 body,
-a{
+a {
     transition: all .3s ease, color .1s ease;
 }
 
