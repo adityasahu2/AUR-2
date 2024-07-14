@@ -2,35 +2,37 @@ $(document).ready(function () {
     $("#dark").click(function () {
         $("#dark,#updark").fadeOut(200);
         $("#light,#uplight").fadeIn(200);
-        $("html").css({
-            "--color1":"#2f3229",
-            "--color2":"#575c4a",
-            "--color3":"#3e4136",
-            "--color4":"#4d4739",
-            "--color5":"#dfdfdf"
-        })
-        $("#link li,.card").mouseenter(function () {
-            $(this).css("background-color", "var(--color2)");
+        $(".color1").css("background-color","var(--color7)");
+        $(".color2,.color3").css("background-color","var(--color9)");
+        $("body").css("background-color","var(--color10)");
+        $("body,a").css("color","var(--color11)");
+        $(".color2").hover(function () {
+            $(this).css({"background-color":"var(--color8)", "box-shadow":"0px 3px 10px var(--color12)"});
+        }, function () {
+            $(this).css({"background-color":"var(--color9)", "box-shadow":"none"});
         });
-        $("#link li,.card").mouseleave(function () {
-            $(this).css("background-color", "var(--color3)");
+        $(".color3hov").hover(function () {
+            $(this).css({"background-color":"var(--color9)", "box-shadow":"0px 3px 10px var(--color12)"});
+        }, function () {
+            $(this).css({"background-color":"#00000000", "box-shadow":"none"});
         });
     });
     $("#light").click(function () {
         $("#light,#uplight").fadeOut(200);
-        $("#dark,#updark").fadeIn(200);
-        $("html").css({
-            "--color1":"#C4DFDF",
-            "--color2":"#D2E9E9",
-            "--color3":"#E3F4F4",
-            "--color4":"#F8F6F4",
-            "--color5":"#000000"
-        })
-        $("#link li,.card").mouseenter(function () {
-            $(this).css("background-color", "var(--color2)");
+        $("#dark,#updark").fadeIn(200); 
+        $(".color1").css("background-color","var(--color1)");
+        $(".color2,.color3").css("background-color","var(--color3)");
+        $("body").css("background-color","var(--color4)");
+        $("body,a").css("color","var(--color5)");
+        $(".color2").hover(function () {
+            $(this).css({"background-color":"var(--color2)", "box-shadow":"0px 3px 10px var(--color6)"});
+        }, function () {
+            $(this).css({"background-color":"var(--color3)", "box-shadow":"none"});
         });
-        $("#link li,.card").mouseleave(function () {
-            $(this).css("background-color", "var(--color3)");
+        $(".color3hov").hover(function () {
+            $(this).css({"background-color":"var(--color3)", "box-shadow":"0px 3px 10px var(--color6)"});
+        }, function () {
+            $(this).css({"background-color":"#00000000", "box-shadow":"none"});
         });
     });
     $("#card1").click(function () {
