@@ -4,26 +4,32 @@ html {
     --color3: #E3F4F4;
     --color4: #F8F6F4;
     --color5: #000000;
+    --color6: #bfc5c5;
+    --color7: #2f3229;
+    --color8: #494e3b;
+    --color9: #3e4136;
+    --color10: #4d4739;
+    --color11: #dfdfdf;
+    --color12: #3a3c33;
 }
 
-header,
-footer {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.color1{
     background-color: var(--color1);
 }
 
-#link li:hover,
-.card:hover {
+.color2:hover{
     background-color: var(--color2);
 }
 
-#uplight:hover,
-#light:hover,
-#link li,
-.card,
-#about,
-.album,
-#updark:hover,
-#dark:hover {
+.color2,
+.color3,
+.color3hov:hover {
     background-color: var(--color3);
 }
 
@@ -36,10 +42,19 @@ a {
     color: var(--color5);
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.color3hov:hover,
+.color2:hover{
+    box-shadow: 0px 3px 10px var(--color6);
+    transform: scale(1.03);
+}
+
+.color1,
+.color2,
+.color3,
+.color3hov,
+body,
+a{
+    transition: all .3s ease, color .1s ease;
 }
 
 #head {
@@ -133,7 +148,6 @@ main h1 {
     font-size: 1.2em;
 }
 
-
 h2 {
     padding: 15px;
 }
@@ -187,6 +201,7 @@ footer {
 
 #footer p {
     margin: 10px;
+    margin-bottom: 20px;
 }
 
 #footer {
