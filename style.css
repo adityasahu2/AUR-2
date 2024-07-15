@@ -21,30 +21,30 @@ html {
 
 .color2 {
     animation: slideInRight 1s ease-out;
-    animation-timeline: view(90vmin 0vmin);
+    animation-timeline: view(90vh 0vh);
 }
 
 .heading {
     position: relative;
     z-index: -1;
     animation: fadeIn 1s ease-out;
-    animation-timeline: view(80vmin 0vmin);
+    animation-timeline: view(80vh 0vh);
 }
 
 .album {
     animation: slideInBottom 1s ease-out;
-    animation-timeline: view(90vmin 0vmin);
+    animation-timeline: view(90vh 0vh);
 }
 
 @keyframes slideInRight {
     from {
+        transform: translateY(100px);
         opacity: 0;
-        transform: translateX(100vmax);
     }
 
     to {
+        transform: translateY(0px);
         opacity: 1;
-        transform: translateX(0px);
     }
 }
 
@@ -88,7 +88,6 @@ html {
 
 body {
     background-color: var(--color4);
-    overflow-x: hidden;
 }
 
 body,
@@ -129,6 +128,7 @@ header {
     padding: 5px;
     border-radius: 20px;
     cursor: pointer;
+    z-index: 1;
 }
 
 .img {
